@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap');
+
+:root{
+    --PaleViolet : hsl(276, 100%, 81%);  /* (sub-heading at the top of the app UI)   */
+    --ModerateViolet : hsl(276, 55%, 52%);  /*(chat on the left)   */
+    --DesaturatedDarkViolet : hsl(271, 15%, 43%); /* (chat on the right) */
+    --GrayishBlue : hsl(206, 6%, 79%) ; /*  (placeholder text)*/
+    --VeryDarkDesaturated : hsl(271, 36%, 24%) ; /* Violet (main heading) */
+    --DarkGrayishViolet : hsl(270, 7%, 64%);   /*  (paragraph) */
+
+    --LightMagenta: hsl(293, 100%, 63%);
+    --LightViolet: hsl(264, 100%, 61%);
+
+    --White: hsl(0, 0%, 100%);
+    --LightGrayishViolet: hsl(270, 20%, 96%) ; /*(app background) */
+    --VeryDarkDesaturatedViolet: hsl(271, 36%, 24%);  /* (submit button background)*/
+    --VeryLightMagenta : hsl(289, 100%, 72%); /* (radio button outline)*/
+        
+
+}
+
+*,*::after ,*::before{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: 'Rubik' , sans-serif;
+}
+
+.chat{
+    background-color: var(--LightGrayishViolet); 
+    padding: 3rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+@media screen and (min-width:900px){
+    .chat{
+        flex-direction: row;
+        
+    }
+}
+.chat__mockup-container{
+    z-index: 1;
+}
+
+.chat__mockup-section{
+    background-color: var(--White);
+    width:18.75rem;
+    height:34.375rem;
+    border-radius: 30px;
+    padding: .6rem;
+    box-shadow:  5px 18px 29px 0px rgba(100, 100, 111, 0.2);
+  
+}
+
+.chat__mockup{
+    background-color:var(--LightGrayishViolet);
+    height: 100%;
+    border-radius: 30px;
+}
+
+
+.chat__header{
+    background-image: linear-gradient( to left , var(--LightMagenta), var(--LightViolet)); 
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-bottom: .7rem;
+
+}
+
+.chat__notch{
+    width: 130px;
+    height: 20px;
+    margin: 0 auto;
+   border-bottom-right-radius: 13px;
+   border-bottom-left-radius: 13px;
+    background:var(--White);
+    translate: 0 -2px;
+}
+
+.chat__header-content{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding:.6rem;
+}
+
+.chat__header-left{
+    display: flex;
+    align-items: center;
+}
+
+.chat__profile{
+    width:25px;
+    margin-right: 8px;
+    border-radius:30px;
+    border: 1px solid var(--White);
+}
+
+.chat__profile-name{
+    color: var(--LightGrayishViolet);
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.chat__status{
+    font-size: .6rem;
+    color:var(--PaleViolet);
+
+}
+
+.chat__message{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+    padding: .6rem;
+     
+}
+
+.chat__left{
+    color: var(--ModerateViolet);
+    background: hsl(270, 7%, 92%);
+    padding: .4rem;
+    font-size: .75rem;
+    max-width: 11rem;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 7px;
+
+}
+
+.chat__img{
+    display:flex;
+    gap:.4rem;
+    align-self: flex-end;
+}
+
+.chat__dog-img{
+    width: 40px;
+    border-radius: 10px;
+}
+
+.chat__right{
+    color: var(--DesaturatedDarkViolet);
+   background-color: var(--White);
+    padding: .4rem;
+    font-size: .75rem;
+    max-width: 11rem;
+    align-self: flex-end;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 7px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.chat__dog-walk{
+    background-image: linear-gradient( to left , var(--LightViolet),var(--LightMagenta)); 
+    max-width: 12rem;
+    padding: .5rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 5px;
+    color: var(--White); 
+
+}
+
+.chat__dog-walk-time{
+    font-weight: 300;
+    font-size: .8rem;
+}
+
+.chat__dog-walk-price{
+    font-weight: 600;
+    font-size: .9rem;
+}
+.chat__input{
+    position: relative;
+    
+    
+}
+
+.chat__input input{
+    outline:none;
+    border: none;
+    background: var(--White);
+    border-radius: 30px;
+    padding: 1rem 3rem 1rem .9rem;
+    width: 100%;
+    color: var(--GrayishBlue);
+    font-size: .9rem;
+    
+}
+
+.chat__input input::placeholder{
+    color: var(--GrayishBlue);
+}
+
+
+
+.chat__send-btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background: var(--VeryDarkDesaturated);
+    position: absolute;
+    top:9px ;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat__about{
+    z-index: 1;
+}
+
+.chat__heading{
+    color: var(--VeryDarkDesaturatedViolet);
+    text-align: center;
+    font-size: 3rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+
+
+.chat__desc{
+    color:var(--DarkGrayishViolet);
+    text-align: center;
+     max-width: 28rem;
+    font-size: 1.2rem;
+    margin: 0 auto;
+}
+
+@media screen and (min-width:68em){
+    .chat__heading{
+        text-align: left;
+    }
+
+    .chat__desc{
+        text-align: left;
+    }
+}
+
+
+
+.chat__overlay-left{
+    width: 28rem;
+    height: 34rem;
+    border-bottom-left-radius: 1000px;
+    border-bottom-right-radius: 1000px;
+    background-image: linear-gradient( to bottom , var(--LightMagenta),var(--LightViolet)); 
+    position: absolute;
+    top: 0;
+    left: -30%;
+}
+
+
+.chat__overlay-right{
+    width: 28rem;
+    height: 34rem;
+    border-bottom-left-radius: 1000px;
+    border-bottom-right-radius: 1000px;
+    background-image: linear-gradient( to bottom , hsl(293, 100%, 96%),hsl(264, 100%, 95%)); 
+    position: absolute;
+    bottom: -8%;
+    rotate: 180deg;
+    right: -10%;
+    
+  
+}
+
+@media screen and (min-width:68em){
+    .chat__overlay-left{
+        left:-8%;
+    }
+}
+
+@media screen and (min-width:68em){
+    .chat__overlay-left{
+        right:-8%;
+    }
+}
